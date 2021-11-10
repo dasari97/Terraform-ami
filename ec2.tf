@@ -46,9 +46,9 @@ resource "aws_security_group" "app-ami" {
 }
 
 resource "null_resource" "apps" {
-  triggers = {
-    abc = timestamp()
-  }
+  #triggers = {
+  #  abc = timestamp()
+  #}
   
   provisioner "remote-exec" {
     connection {
