@@ -58,7 +58,7 @@ resource "null_resource" "apps" {
     connection {
       user     = jsondecode(data.aws_secretsmanager_secret_version.Dev_secret.secret_string)["ssh_user"]
       password = jsondecode(data.aws_secretsmanager_secret_version.Dev_secret.secret_string)["ssh_pass"]
-      host     = aws_ami.AppAmi.private_ip
+      host     = aws_instance.AppAmi.private_ip
     }
     
     inline = [
