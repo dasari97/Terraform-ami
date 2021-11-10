@@ -46,13 +46,9 @@ resource "aws_security_group" "app-ami" {
 }
 
 resource "null_resource" "apps" {
-  #triggers = {
-  #  abc = timestamp()
-  #}
-  # remove comment's when you want to run the mongodb null resource
-  #triggers = {
-   # abc = local.all_instance_ip
-  #}
+  triggers = {
+    abc = timestamp()
+  }
   
   provisioner "remote-exec" {
     connection {
