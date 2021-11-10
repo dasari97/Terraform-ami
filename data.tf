@@ -1,7 +1,7 @@
 data "aws_ami" "ami" {
   most_recent      = true
-  name_regex       = "^Centos-7*"
-  owners           = ["973714476881"]
+  name_regex       = "^ansible"
+  owners           = ["795902710157"]
   }
   
 data "aws_secretsmanager_secret" "Dev_secret" {
